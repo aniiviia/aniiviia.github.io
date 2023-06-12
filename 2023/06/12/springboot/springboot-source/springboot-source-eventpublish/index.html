@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://aniiviia.github.io/"/>
+  
+  <link rel="canonical" href="https://aniiviia.github.io/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,16 +34,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Aniiviia</title>
-  <meta name="keywords" content="">
+  <title>Spring Boot 事件通知 - Aniiviia</title>
+  <meta name="keywords" content="Spring Boot,null">
   <meta desc name="description" content="  - aniiviia - Aniiviia">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Aniiviia">
-<meta property="og:url" content="https://aniiviia.github.io/index.html">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot 事件通知">
+<meta property="og:url" content="https://aniiviia.github.io/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/index.html">
 <meta property="og:site_name" content="Aniiviia">
+<meta property="og:description" content="总体说明从Spring Boot 启动过程中发现事件的通知由 SpringApplicationRunListeners处理，SpringApplicationRunListeners封装了事件的监听者EventPublishingRunListener，然后由EventPublishingRunListener中的分发器 SimpleApplicationEventMulticaster 进一步">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-06-12T11:29:22.247Z">
+<meta property="article:modified_time" content="2022-02-27T08:51:34.141Z">
 <meta property="article:author" content="aniiviia">
+<meta property="article:tag" content="Spring Boot">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2100,7 +2105,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2165,7 +2170,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2364,89 +2369,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div id="l_body">
       <div id="l_cover">
   
-    
-      <div class="cover-wrapper  dock" id='full'>
-        
-  <div class='cover-bg lazyload placeholder' data-bg="https://s2.loli.net/2022/02/27/5C9ZNBa1JgEtqMm.jpg"></div>
-
-<div class='cover-body'>
-  <div class='top'>
-    
-    
-      <p class="title">Aniiviia</p>
-    
-    
-      <p class="subtitle">与其互为人间 不如自成宇宙</p>
-    
-  </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
-        
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <i class='fa-solid fa-snowflake fa-fw'></i><p>博客</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              active-action="action-archives">
-              <i class='fa-solid fa-book fa-fw'></i><p>文档</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <i class='fa-solid fa-tags fa-fw'></i><p>标签</p>
-            </a>
-          
-            <a href="/categories/"
-              
-              
-              active-action="action-categories">
-              <i class='fa-solid fa-th-large fa-fw'></i><p>分类</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-        <div id="scroll-down"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
-      </div>
-    
-  
 </div>
 
       <div id="safearea">
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-            
-              <div class='post-wrapper'>
-                <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://aniiviia.github.io/2023/06/12/springboot/springboot-source/springboot-source-overview/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://aniiviia.github.io/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Aniiviia">
   </span>
@@ -2455,69 +2385,238 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content=" ">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/12/springboot/springboot-source/springboot-source-overview/"  itemprop="url">
-        Spring Boot 源码解读
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      Spring Boot 源码解读
+    
+      <h1 class="title" itemprop="name headline">
+        Spring Boot 事件通知
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://s2.loli.net/2022/02/27/GaPx7YIhERo4qAj.png" class="lazyload" data-srcset="https://s2.loli.net/2022/02/27/GaPx7YIhERo4qAj.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">aniiviia</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Spring-Boot/">Spring Boot</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Spring-Boot/" itemprop="url"><span itemprop="name">Spring Boot</span></a>
+      </span>
     
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-12T19:29:22+08:00">2023-06-12</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Spring-Boot/">Spring Boot</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Spring-Boot/" itemprop="url"><span itemprop="name">Spring Boot</span></a>
-            </span>
+
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-12T19:29:22+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年6月12日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="总体说明"><a href="#总体说明" class="headerlink" title="总体说明"></a>总体说明</h2><p>从Spring Boot 启动过程中发现事件的通知由 SpringApplicationRunListeners处理，SpringApplicationRunListeners封装了事件的监听者EventPublishingRunListener，然后由EventPublishingRunListener中的分发器 SimpleApplicationEventMulticaster 进一步将事件通知到各个监听者（SimpleApplicationEventMulticaster spring的类后面在写）</p>
+<h3 id="SpringApplicationRunListeners"><a href="#SpringApplicationRunListeners" class="headerlink" title="SpringApplicationRunListeners"></a>SpringApplicationRunListeners</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">SpringApplicationRunListeners</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Log log;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> List&lt;SpringApplicationRunListener&gt; listeners;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> ApplicationStartup applicationStartup;</span><br><span class="line"></span><br><span class="line">	SpringApplicationRunListeners(Log log, Collection&lt;? <span class="keyword">extends</span> <span class="title class_">SpringApplicationRunListener</span>&gt; listeners,</span><br><span class="line">			ApplicationStartup applicationStartup) &#123;</span><br><span class="line">		<span class="built_in">this</span>.log = log;</span><br><span class="line">		<span class="built_in">this</span>.listeners = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(listeners);</span><br><span class="line">		<span class="built_in">this</span>.applicationStartup = applicationStartup;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">/*</span></span><br><span class="line"><span class="comment">    省略代码</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">doWithListeners</span><span class="params">(String stepName, Consumer&lt;SpringApplicationRunListener&gt; listenerAction,</span></span><br><span class="line"><span class="params">			Consumer&lt;StartupStep&gt; stepAction)</span> &#123;</span><br><span class="line">		<span class="type">StartupStep</span> <span class="variable">step</span> <span class="operator">=</span> <span class="built_in">this</span>.applicationStartup.start(stepName);</span><br><span class="line">        <span class="comment">//通过SpringApplicationRunListener分发事件</span></span><br><span class="line">		<span class="built_in">this</span>.listeners.forEach(listenerAction);</span><br><span class="line">		<span class="keyword">if</span> (stepAction != <span class="literal">null</span>) &#123;</span><br><span class="line">			stepAction.accept(step);</span><br><span class="line">		&#125;</span><br><span class="line">		step.end();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="EventPublishingRunListener"><a href="#EventPublishingRunListener" class="headerlink" title="EventPublishingRunListener"></a>EventPublishingRunListener</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">EventPublishingRunListener</span> <span class="keyword">implements</span> <span class="title class_">SpringApplicationRunListener</span>, Ordered &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> SpringApplication application;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> String[] args;</span><br><span class="line">    <span class="comment">// 简单的事件分发器，</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> SimpleApplicationEventMulticaster initialMulticaster;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="title function_">EventPublishingRunListener</span><span class="params">(SpringApplication application, String[] args)</span> &#123;</span><br><span class="line">		<span class="built_in">this</span>.application = application;</span><br><span class="line">		<span class="built_in">this</span>.args = args;</span><br><span class="line">		<span class="built_in">this</span>.initialMulticaster = <span class="keyword">new</span> <span class="title class_">SimpleApplicationEventMulticaster</span>();</span><br><span class="line">		<span class="keyword">for</span> (ApplicationListener&lt;?&gt; listener : application.getListeners()) &#123;</span><br><span class="line">			<span class="built_in">this</span>.initialMulticaster.addApplicationListener(listener);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="SpringApplicationRunListener"><a href="#SpringApplicationRunListener" class="headerlink" title="SpringApplicationRunListener"></a>SpringApplicationRunListener</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">SpringApplicationRunListener</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Called immediately when the run method has first started. Can be used for very</span></span><br><span class="line"><span class="comment">	 * early initialization.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> bootstrapContext the bootstrap context</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">starting</span><span class="params">(ConfigurableBootstrapContext bootstrapContext)</span> &#123;</span><br><span class="line">		starting();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Called immediately when the run method has first started. Can be used for very</span></span><br><span class="line"><span class="comment">	 * early initialization.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@deprecated</span> since 2.4.0 for removal in 2.6.0 in favor of</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@link</span> #starting(ConfigurableBootstrapContext)&#125;</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Deprecated</span></span><br><span class="line">	<span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">starting</span><span class="params">()</span> &#123;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Called once the environment has been prepared, but before the</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@link</span> ApplicationContext&#125; has been created.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> bootstrapContext the bootstrap context</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> environment the environment</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">environmentPrepared</span><span class="params">(ConfigurableBootstrapContext bootstrapContext,</span></span><br><span class="line"><span class="params">			ConfigurableEnvironment environment)</span> &#123;</span><br><span class="line">		environmentPrepared(environment);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Called once the environment has been prepared, but before the</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@link</span> ApplicationContext&#125; has been created.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> environment the environment</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@deprecated</span> since 2.4.0 for removal in 2.6.0 in favor of</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@link</span> #environmentPrepared(ConfigurableBootstrapContext, ConfigurableEnvironment)&#125;</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Deprecated</span></span><br><span class="line">	<span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">environmentPrepared</span><span class="params">(ConfigurableEnvironment environment)</span> &#123;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Called once the &#123;<span class="doctag">@link</span> ApplicationContext&#125; has been created and prepared, but</span></span><br><span class="line"><span class="comment">	 * before sources have been loaded.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> context the application context</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">contextPrepared</span><span class="params">(ConfigurableApplicationContext context)</span> &#123;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Called once the application context has been loaded but before it has been</span></span><br><span class="line"><span class="comment">	 * refreshed.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> context the application context</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">contextLoaded</span><span class="params">(ConfigurableApplicationContext context)</span> &#123;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * The context has been refreshed and the application has started but</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@link</span> CommandLineRunner CommandLineRunners&#125; and &#123;<span class="doctag">@link</span> ApplicationRunner</span></span><br><span class="line"><span class="comment">	 * ApplicationRunners&#125; have not been called.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> context the application context.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@since</span> 2.0.0</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">started</span><span class="params">(ConfigurableApplicationContext context)</span> &#123;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Called immediately before the run method finishes, when the application context has</span></span><br><span class="line"><span class="comment">	 * been refreshed and all &#123;<span class="doctag">@link</span> CommandLineRunner CommandLineRunners&#125; and</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@link</span> ApplicationRunner ApplicationRunners&#125; have been called.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> context the application context.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@since</span> 2.0.0</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">running</span><span class="params">(ConfigurableApplicationContext context)</span> &#123;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Called when a failure occurs when running the application.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> context the application context or &#123;<span class="doctag">@code</span> null&#125; if a failure occurred before</span></span><br><span class="line"><span class="comment">	 * the context was created</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> exception the failure</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@since</span> 2.0.0</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">failed</span><span class="params">(ConfigurableApplicationContext context, Throwable exception)</span> &#123;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>SpringApplicationRunListener接口定义了广播事件的不同阶段</p>
+<h2 id="Spring-Boot个阶段的事件处理说明"><a href="#Spring-Boot个阶段的事件处理说明" class="headerlink" title="Spring Boot个阶段的事件处理说明"></a>Spring Boot个阶段的事件处理说明</h2><h3 id="starting"><a href="#starting" class="headerlink" title="starting"></a>starting</h3><ol>
+<li><em><strong>LoggingApplicationListener</strong></em> 获取日志系统，并做前置处理 从 META-INF&#x2F;spring.factories 获取LoggingSystemFactory</li>
+<li><em><strong>BackgroundPreinitializer</strong></em>   啥也没做</li>
+<li><em><strong>DelegatingApplicationListener</strong></em> 啥也没做</li>
+</ol>
+<h3 id="environmentPrepared"><a href="#environmentPrepared" class="headerlink" title="environmentPrepared"></a>environmentPrepared</h3><ol>
+<li><em><strong>EnvironmentPostProcessorApplicationListener</strong></em>  环境后处理。将配置在“spring.factories”中<strong>EnvironmentPostProcessor</strong> 接口的实现类实例化并运行其 <strong>postProcessEnvironment</strong> 方法。（在此可以自我拓展）</li>
+</ol>
+<ul>
+<li>RandomValuePropertySourceEnvironmentPostProcessor    添加random到 propertySources</li>
+<li>SystemEnvironmentPropertySourceEnvironmentPostProcessor  把systemEnvironment的对象类型从SystemEnvironmentPropertySource 换成了 SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource</li>
+<li>SpringApplicationJsonEnvironmentPostProcessor  将名为 spring.application.json 的json解析成map存入环境中</li>
+<li>CloudFoundryVcapEnvironmentPostProcessor  云平台相关，不明白</li>
+<li>ConfigDataEnvironmentPostProcessor   配置文件的读取</li>
+<li>DebugAgentEnvironmentPostProcessor  调式代理</li>
+<li>IntegrationPropertiesEnvironmentPostProcessor  集成配置加载</li>
+</ul>
+<ol start="2">
+<li><em><strong>AnsiOutputApplicationListener</strong></em> 设置输出格式。根据spring.output.ansi.enabled的值来配置AnsiOutput</li>
+<li><em><strong>LoggingApplicationListener</strong></em> 完成日志系统配置</li>
+<li><em><strong>BackgroundPreinitializer</strong></em> 加快应用初始化。后台线程初始化</li>
+<li><em><strong>DelegatingApplicationListener</strong></em> 将应用事件广播给环境属性context.listener.classes指定的那些监听器。</li>
+<li><em><strong>FileEncodingApplicationListener</strong></em></li>
+</ol>
+<h3 id="contextPrepared"><a href="#contextPrepared" class="headerlink" title="contextPrepared"></a>contextPrepared</h3><ol>
+<li><em><strong>BackgroundPreinitializer</strong></em> 没发生什么</li>
+<li><em><strong>DelegatingApplicationListener</strong></em> 没发生什么</li>
+</ol>
+<h3 id="contextLoaded"><a href="#contextLoaded" class="headerlink" title="contextLoaded"></a>contextLoaded</h3><ol>
+<li><em><strong>EnvironmentPostProcessorApplicationListener</strong></em> 延迟日志写入到目的地</li>
+<li><em><strong>LoggingApplicationListener</strong></em> 注册日志系统，日志组到 beanFactory</li>
+<li><em><strong>BackgroundPreinitializer</strong></em> 没发生什么</li>
+<li><em><strong>DelegatingApplicationListener</strong></em> 没发生什么</li>
+</ol>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2023/06/12/springboot/springboot-source/springboot-source-overview/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
-
-</div>
-
-              </div>
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
+  
     
 
-  </section>
- 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-02-27T16:51:34+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年2月27日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Spring-Boot/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Spring Boot</p></a></div>
+  <span hidden itemprop="keywords">Spring Boot</span>
+  
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://aniiviia.github.io/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/&title=Spring Boot 事件通知 - Aniiviia&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://aniiviia.github.io/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/&title=Spring Boot 事件通知 - Aniiviia&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://aniiviia.github.io/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/&title=Spring Boot 事件通知 - Aniiviia&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
 
 
 </div>
@@ -2528,57 +2627,97 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile ">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://s2.loli.net/2022/02/27/SuMmJD9HcZ8yI6o.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-          <p>与其互为人间 不如自成宇宙</p>
 
-        
-        
-      </div>
+
+  
+<section class="widget list group desktop mobile">
+  
+  <header>
     
+      <i class="fa fa-book fa-fw" aria-hidden="true"></i><span class='name'>Spring Boot 源码</span>
     
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="/2023/06/12/springboot/springboot-source/springboot-source-overview/" href="/2023/06/12/springboot/springboot-source/springboot-source-overview/"
+          
+          
+          active-action="action-20230612springbootspringboot-sourcespringboot-source-overview"
+          >
+          <div class='name'>
+            
+            1.Spring Boot 阅读前言
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2023/06/12/springboot/springboot-source/springboot-source-start/" href="/2023/06/12/springboot/springboot-source/springboot-source-start/"
+          
+          
+          active-action="action-20230612springbootspringboot-sourcespringboot-source-start"
+          >
+          <div class='name'>
+            
+            2.Spring Boot 启动流程
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/" href="/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/"
+          
+          
+          active-action="action-20230612springbootspringboot-sourcespringboot-source-eventpublish"
+          >
+          <div class='name'>
+            
+            3.Spring Boot 事件通知
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2023/06/12/springboot/springboot-source/springboot-source-loadconfigfile/" href="/2023/06/12/springboot/springboot-source/springboot-source-loadconfigfile/"
+          
+          
+          active-action="action-20230612springbootspringboot-sourcespringboot-source-loadconfigfile"
+          >
+          <div class='name'>
+            
+            4.Spring Boot 读取配置文件
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2023/06/12/springboot/springboot-source/springboot-source-bean/" href="/2023/06/12/springboot/springboot-source/springboot-source-bean/"
+          
+          
+          active-action="action-20230612springbootspringboot-sourcespringboot-source-bean"
+          >
+          <div class='name'>
+            
+            5.Spring Boot bean注册
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2023/06/12/springboot/springboot-source/springboot-source-autoconfig/" href="/2023/06/12/springboot/springboot-source/springboot-source-autoconfig/"
+          
+          
+          active-action="action-20230612springbootspringboot-sourcespringboot-source-autoconfig"
+          >
+          <div class='name'>
+            
+            6.Spring Boot 自动装配
+          </div>
+          
+        </a></li>
+      
+    </ul>
   </div>
 </section>
 
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Spring-Boot/" href="/categories/Spring-Boot/"
-            active-action="action-categoriesSpring-Boot"
-            ><div class='name'>Spring Boot</div><div class='badge'>(6)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
 
 
     
@@ -2588,27 +2727,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-  
-  <section class="widget tagcloud desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Spring-Boot/" style="font-size: 14px; color: #999">Spring Boot</a>
-    </div>
-  </section>
-
-
     
   
 
 
 <div class="widget-sticky">
+
+  
+  
+
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E4%BD%93%E8%AF%B4%E6%98%8E"><span class="toc-text">总体说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SpringApplicationRunListeners"><span class="toc-text">SpringApplicationRunListeners</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EventPublishingRunListener"><span class="toc-text">EventPublishingRunListener</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SpringApplicationRunListener"><span class="toc-text">SpringApplicationRunListener</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot%E4%B8%AA%E9%98%B6%E6%AE%B5%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E8%AF%B4%E6%98%8E"><span class="toc-text">Spring Boot个阶段的事件处理说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#starting"><span class="toc-text">starting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#environmentPrepared"><span class="toc-text">environmentPrepared</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#contextPrepared"><span class="toc-text">contextPrepared</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#contextLoaded"><span class="toc-text">contextLoaded</span></a></li></ol></li></ol>
+  </div>
+</section>
+
+  
 
 </div>
 
@@ -3066,7 +3209,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Aniiviia","url":"https://aniiviia.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"aniiviia","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://aniiviia.github.io/","sameAs":["https://github.com/volantis-x"],"description":" "},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://aniiviia.github.io/","name":"Aniiviia"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Aniiviia","url":"https://aniiviia.github.io/","keywords":null,"description":" ","author":{"@type":"Person","name":"aniiviia","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://aniiviia.github.io/","description":" "},"publisher":{"@type":"Organization","name":"Aniiviia","url":"https://aniiviia.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://aniiviia.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":" ","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"aniiviia","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://aniiviia.github.io/"},"publisher":{"@type":"Organization","name":"Aniiviia","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Aniiviia","url":"https://aniiviia.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"aniiviia","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://aniiviia.github.io/","sameAs":["https://github.com/volantis-x"],"description":" "},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://aniiviia.github.io/","name":"Aniiviia"}},{"@type":"ListItem","position":2,"item":{"@id":"https://aniiviia.github.io/categories/Spring-Boot/","name":"Spring Boot"}},{"@type":"ListItem","position":3,"item":{"@id":"https://aniiviia.github.io/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/","name":"Spring Boot 事件通知"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Aniiviia","url":"https://aniiviia.github.io/","keywords":null,"description":" ","author":{"@type":"Person","name":"aniiviia","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://aniiviia.github.io/","description":" "},"publisher":{"@type":"Organization","name":"Aniiviia","url":"https://aniiviia.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://aniiviia.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Spring Boot 事件通知","description":" ","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://aniiviia.github.io/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/"},"author":{"@type":"Person","name":"aniiviia","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://aniiviia.github.io/"},"publisher":{"@type":"Organization","name":"Aniiviia","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://aniiviia.github.io/2023/06/12/springboot/springboot-source/springboot-source-eventpublish/","wordCount":0,"datePublished":"2023-06-12T11:29:22.247Z","dateModified":"2022-02-27T08:51:34.141Z","articleSection":"Spring Boot","keywords":"Spring Boot","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
